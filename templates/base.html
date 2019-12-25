@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +11,20 @@
 " rel="stylesheet">
     {% block head %}{% endblock%}
 </head>
+
 <body class="{% block bodyclass %}{% endblock %}">
-<div id="page" class="site">
-	<div class="site-inner">
-    {% include 'parts/header.html' %}
-    <div id="content" class="site-content">
-    {% block content %}
+    <div id="page" class="site">
+        <div class="site-inner">
+            {% include 'parts/header.html' %}
+            <div id="content" class="site-content bg-gray-200 pt-8 pb-6">
+                {% block content %}
 
-    {% endblock %}
+                {% endblock %}
 
-    </div><!-- .site-content -->
-    <footer id="colophon" class="site-footer" role="contentinfo">
-    footer
-    </footer><!-- .site-footer -->
-	</div><!-- .site-inner -->
-</div><!-- .site -->
+            </div><!-- .site-content -->
+            {% include "parts/footer.html" %}
+        </div><!-- .site-inner -->
+    </div><!-- .site -->
 </body>
+
 </html>
